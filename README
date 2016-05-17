@@ -2,8 +2,7 @@ NAME
 	slow - Non-interactive stdout delay. Pipe stuff into it.
 
 SYNOPSIS
-	slow [OPTION]... [FILE]...
-	[FILE] | wc -d 300
+	[FILE] | slow -d 100
 
 Usage: lsmod | slow 
 
