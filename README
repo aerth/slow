@@ -1,0 +1,20 @@
+NAME
+	slow - Non-interactive stdout delay. Pipe stuff into it.
+
+SYNOPSIS
+	slow [OPTION]... [FILE]...
+	[FILE] | wc -d 300
+
+Usage: lsmod | slow 
+
+Custom Delay: dmesg | slow -d 100
+
+Delay is in microseconds. Default is 300. 
+
+The exception to '-d' flag is setting to 1-5 which are in seconds.
+
+AUTHOR
+	aerth [aerth@sdf.org]
+
+LICENSE
+	Copyright (c) 2016 aerth, License GPLv3.
