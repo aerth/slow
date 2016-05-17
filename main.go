@@ -8,7 +8,7 @@ import (
 	"time"
 )
 
-var VERSION = "undefined"
+var VERSION = "undefined" // make(1) will change this.
 var delay = time.Microsecond * 300
 var err error
 
@@ -24,8 +24,7 @@ AUTHOR
 	Copyright (c) 2016 aerth [aerth@sdf.org]
 
 SYNOPSIS
-	slow [OPTION]... [FILE]...
-	[FILE] | wc -d 300
+	[FILE] | slow -d 300
 
 USAGE
 	lsmod | slow 
@@ -70,8 +69,9 @@ func main() {
 			default:
 				delay, err = time.ParseDuration(os.Args[2] + "ms")
 				if err != nil {
-					fmt.Fprintln(os.Stderr, "slow: Error parsing delay. Using default delay of 300ms.")
-					delay = time.Second
+					fmt.Fprintln(os.Stderr, err)
+					showhelp()
+					os.Exit(1)
 				}
 			}
 		default:
@@ -79,6 +79,8 @@ func main() {
 
 		}
 	}
+
+	// Slow stdin with delay
 	slow(delay)
 
 }
