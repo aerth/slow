@@ -22,11 +22,17 @@ TIPS
 
 SOURCE
 	go get -v -u github.com/aerth/slow
+	
+	- or -
+
 	wget https://github.com/aerth/slow/archive/master.zip
 
 INSTALL
+	go get -v -u github.com/aerth/slow
+
+	- or -
+
 	make && sudo make install
-	or use go get: go get -v -u github.com/aerth/slow
 	
 ```
 
