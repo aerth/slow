@@ -19,4 +19,14 @@ TIPS
 	Custom Delay: cat main.go | slow -d 100
 	Delay is in microseconds. Default is 300. 
 	The exception to '-d' flag is setting to 1-5 which are in seconds.
+
+SOURCE
+	go get -v -u github.com/aerth/slow
+	wget https://github.com/aerth/slow/archive/master.zip
+
+INSTALL
+	make && sudo make install
+	or use go get: go get -v -u github.com/aerth/slow
+	
 ```
+
