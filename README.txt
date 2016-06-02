@@ -1,6 +1,5 @@
 # slow
 
-```
 NAME
 	slow, version ` + VERSION + ` - Non-interactive pager (stdout delay)
 	Pipe fast things (such as lsmod or dmesg) into it.
@@ -34,5 +33,4 @@ INSTALL
 
 	make && sudo make install
 	
-```
 
