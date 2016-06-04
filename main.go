@@ -8,11 +8,12 @@ import (
 	"time"
 )
 
+// Version is replaced with a commit hash when compiled using GNU make.
 var VERSION = "undefined" // make(1) will change this.
 var delay = time.Microsecond * 300
 var err error
 
-// Our tokens are lines
+// MaxScanTokenSize is the max bytes allowed in one line.
 const MaxScanTokenSize = 128 * 4906
 
 var helptext = `
