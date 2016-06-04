@@ -8,8 +8,8 @@ import (
 	"time"
 )
 
-// Version is replaced with a commit hash when compiled using GNU make.
-var VERSION = "undefined" // make(1) will change this.
+// version is replaced with a commit hash when compiled using GNU make.
+var version = "undefined" // make(1) will change this.
 var delay = time.Microsecond * 300
 var err error
 
@@ -18,11 +18,14 @@ const MaxScanTokenSize = 128 * 4906
 
 var helptext = `
 NAME
-	slow, version ` + VERSION + ` - Non-interactive stdout delay.
+	slow, version ` + version + ` - Non-interactive stdout delay.
 	Pipe fast things (such as lsmod or dmesg) into it.
 
 AUTHOR
 	Copyright (c) 2016 aerth [aerth@sdf.org]
+
+SOURCE
+	http://github.com/aerth/slow
 
 SYNOPSIS
 	[FILE] | slow -d 300
@@ -38,7 +41,7 @@ TIPS
 `
 
 func showversion() {
-	fmt.Println(os.Args[0], "Version #", VERSION)
+	fmt.Println(os.Args[0], "version", version)
 	os.Exit(0)
 }
 
