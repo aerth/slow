@@ -1,5 +1,8 @@
 # slow
 
+[![Go Report Card](https://goreportcard.com/badge/github.com/aerth/slow)](https://goreportcard.com/report/github.com/aerth/slow)
+
+```
 NAME
 	slow, version ` + VERSION + ` - Non-interactive pager (stdout delay)
 	Pipe fast things (such as lsmod or dmesg) into it.
@@ -32,5 +35,5 @@ INSTALL
 	- or -
 
 	make && sudo make install
-	
 
+```
